@@ -7,10 +7,6 @@ const steps = [
     path: "/checkout/bag",
   },
   {
-    label: "ADDRESS",
-    path: "/checkout/address",
-  },
-  {
     label: "PAYMENT",
     path: "/checkout/payment",
   },

@@ -165,7 +165,7 @@ const Bag = () => {
                         </div>
 
                         <button 
-                        onClick={() => navigate("/checkout/address")}
+                        onClick={() => navigate("/checkout/payment")}
                         className="cursor-pointer mt-5 w-full rounded bg-pink-500 py-3 font-semibold text-white hover:bg-pink-600">
                             PLACE ORDER
                         </button>

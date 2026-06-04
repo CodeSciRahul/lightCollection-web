@@ -7,6 +7,7 @@ import ProductDetail from "./pages/ProductDetail";
 import Bag from "./pages/Bag.jsx"
 import Address from "./pages/Address.jsx"
 import Payment from "./pages/Payment.jsx"
+import "@radix-ui/themes/styles.css";
 
 function App() {
   return (
