@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+
+/* Primary Pink:     #ec4899
+Dark Pink:        #db2777
+Light Pink:       #fdf2f8
+Rose Pink:        #f9a8d4
+Accent Fuchsia:   #d946ef
+Background:       #fffafc */

@@ -1,0 +1,82 @@
+export const MENU_DATA = {
+    MEN: {
+      Fashion: [
+        "T-Shirts",
+        "Shirts",
+        "Polo Shirts",
+        "Jeans",
+        "Trousers",
+        "Shorts",
+        "Suits & Blazers",
+        "Jackets & Coats",
+        "Hoodies & Sweatshirts",
+        "Activewear",
+      ],
+      Shoes: [
+        "Sneakers",
+        "Loafers",
+        "Formal Shoes",
+        "Boots",
+        "Sandals",
+        "Slippers",
+      ],
+      Accessories: [
+        "Watches",
+        "Sunglasses",
+        "Wallets",
+        "Belts",
+        "Ties",
+        "Caps & Hats",
+        "Bracelets",
+        "Travel Bags",
+      ],
+    },
+  
+    WOMEN: {
+      Fashion: [
+        "Dresses",
+        "Tops & Blouses",
+        "T-Shirts",
+        "Jeans",
+        "Trousers",
+        "Skirts",
+        "Jumpsuits",
+        "Matching Sets",
+        "Jackets & Coats",
+        "Activewear",
+        "Lingerie & Sleepwear",
+      ],
+  
+      Shoes: [
+        "Heels",
+        "Pumps",
+        "Sandals",
+        "Flats",
+        "Sneakers",
+        "Boots",
+        "Wedges",
+        "Loafers",
+      ],
+  
+      Bags: [
+        "Handbags",
+        "Tote Bags",
+        "Crossbody Bags",
+        "Shoulder Bags",
+        "Clutches",
+        "Backpacks",
+        "Travel Bags",
+      ],
+  
+      Accessories: [
+        "Sunglasses",
+        "Jewelry",
+        "Watches",
+        "Belts",
+        "Hair Accessories",
+        "Scarves",
+        "Wallets",
+        "Hats & Caps",
+      ],
+    },
+  };
