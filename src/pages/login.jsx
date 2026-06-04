@@ -208,7 +208,7 @@ const Login = () => {
           to="/"
           className="block text-center text-5xl font-bold mb-6 hover:opacity-80"
         >
-          savana
+          LIGHTCOLLECTION
         </Link>
 
         <div className="bg-yellow-300 py-4 text-center mb-8">

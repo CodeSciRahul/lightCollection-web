@@ -109,7 +109,7 @@ const Header = () => {
                         >
                             <h1 className="text-3xl md:text-4xl font-black tracking-tight">
                                 <span className="bg-gradient-to-r from-pink-500 via-fuchsia-500 to-pink-600 bg-clip-text text-transparent">
-                                    savana
+                                LIGHTCOLLECTION
                                 </span>
                             </h1>
                         </Link>

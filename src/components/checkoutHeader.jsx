@@ -27,7 +27,7 @@ const CheckoutHeader = () => {
           to="/"
           className="text-2xl font-black tracking-wide"
         >
-          SAVANA
+          LIGHTCOLLECTION
         </Link>
 
         {/* Steps */}
