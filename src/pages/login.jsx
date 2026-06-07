@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { useAuth } from "../context/AuthContext.jsx";
 import { updateUserProfile } from "../services/authService.js";
+import { showErrorToast } from "../lib/toast.js";
 
 const categoryOptions = [
   "Dresses",
@@ -117,7 +118,9 @@ const Login = () => {
       await finishAuth(credential.user, buildProfilePayload());
       console.log("credential", credential);
     } catch (err) {
-      setError(mapAuthError(err));
+      const message = mapAuthError(err);
+      setError(message);
+      showErrorToast(err, message);
     } finally {
       setLoading(false);
     }
@@ -147,7 +150,9 @@ const Login = () => {
 
       await finishAuth(credential.user);
     } catch (err) {
-      setError(mapAuthError(err));
+      const message = mapAuthError(err);
+      setError(message);
+      showErrorToast(err, message);
     } finally {
       setLoading(false);
     }
@@ -164,7 +169,9 @@ const Login = () => {
         activeTab === "signup" && showProfile ? buildProfilePayload() : {};
       await finishAuth(result.user, profile);
     } catch (err) {
-      setError(mapAuthError(err));
+      const message = mapAuthError(err);
+      setError(message);
+      showErrorToast(err, message);
     } finally {
       setLoading(false);
     }
@@ -181,7 +188,9 @@ const Login = () => {
         activeTab === "signup" && showProfile ? buildProfilePayload() : {};
       await finishAuth(result.user, profile);
     } catch (err) {
-      setError(mapAuthError(err));
+      const message = mapAuthError(err);
+      setError(message);
+      showErrorToast(err, message);
     } finally {
       setLoading(false);
     }

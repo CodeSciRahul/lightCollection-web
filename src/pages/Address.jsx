@@ -1,24 +1,19 @@
-import {useState, useEffect} from "react"
-import { apiRequest } from "../util/api";
+import { useAddresses } from "../hooks/useAddresses";
+import { useCart } from "../hooks/useCart";
+
 const Address = () => {
-    const [address, setAddress] = useState([]);
-    const [cart, setCart] = useState([])
+  const { data: addressData } = useAddresses();
+  const { data: cart } = useCart();
 
-    useEffect(() => {
-        const fetchCart = async () => {
-            const response = await apiRequest("/addresses");
-            const cartResponse = await apiRequest("/cart")
-            setAddress(response?.addresses)
-            setCart(cartResponse)
-        };
+  const addresses = addressData?.addresses || [];
 
-        fetchCart();
-    }, []);
-    return (
-        <div>
-            <h1>Address</h1>
-        </div>
-    )
-}
+  return (
+    <div>
+      <h1>Address</h1>
+      <p>{addresses.length} saved addresses</p>
+      <p>Cart items: {cart?.itemCount ?? 0}</p>
+    </div>
+  );
+};
 
-export default Address
+export default Address;

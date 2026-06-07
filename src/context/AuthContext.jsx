@@ -14,6 +14,7 @@ import {
   fetchProfile,
   logoutFromBackend,
 } from "../services/authService.js";
+import { showErrorToast } from "../lib/toast.js";
 
 const AuthContext = createContext(null);
 
@@ -79,9 +80,15 @@ export const AuthProvider = ({ children }) => {
       try {
         const token = await fbUser.getIdToken();
         await establishBackendSession(token);
-      } catch {
+      } catch (error) {
         const profile = await refreshProfile();
-        if (!profile) clearSession();
+        if (!profile) {
+          showErrorToast(
+            error,
+            "Unable to restore your session. Please sign in again."
+          );
+          clearSession();
+        }
       } finally {
         setLoading(false);
       }

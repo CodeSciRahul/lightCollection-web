@@ -1,10 +1,7 @@
-import { apiRequest, setStoredToken } from "../util/api.js";
+import { apiClient, setStoredToken } from "../util/api.js";
 
 export const syncBackendSession = async (firebaseToken) => {
-  const data = await apiRequest("/auth/login", {
-    method: "POST",
-    body: { token: firebaseToken },
-  });
+  const data = await apiClient.post("/auth/login", { token: firebaseToken });
 
   if (data.token) {
     setStoredToken(data.token);
@@ -13,13 +10,9 @@ export const syncBackendSession = async (firebaseToken) => {
   return data;
 };
 
-export const fetchProfile = () => apiRequest("/users/me");
+export const fetchProfile = () => apiClient.get("/users/me");
 
 export const updateUserProfile = (profile) =>
-  apiRequest("/users/me", {
-    method: "PUT",
-    body: profile,
-  });
+  apiClient.put("/users/me", profile);
 
-export const logoutFromBackend = () =>
-  apiRequest("/auth/logout", { method: "POST" });
+export const logoutFromBackend = () => apiClient.post("/auth/logout");
